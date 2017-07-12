@@ -1,0 +1,40 @@
+﻿body {
+    background-image: url(image/wgl.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body-content.container > .row {
+    margin: 0;
+    padding: 0px 1px 0px 1px;
+    height: 200px; /* Will be resize by script: Index.js */
+}
+
+    .body-content.container > .row > div {
+        height: 100%;
+        overflow-y: auto;
+        border: 1px solid white;
+        cursor: pointer;
+
+        transition: 0.25s;
+    }
+        /* TODO: Borders */
+        /* For the middle block - hide border by sides */
+        .body-content.container > .row > div:nth-of-type(2n) {
+            border-left: none;
+            border-right: none;
+        }
+        .body-content.container > .row:nth-of-type(2n) > div {
+            border-top: none;
+            border-bottom: none;
+        }
+        /* For the center block - hide all border */
+        .body-content.container > .row:nth-of-type(2n) > div:nth-of-type(2n) {
+            border: none;
+        }
+    .body-content.container > .row > div:hover {
+       
+        color: black;
+        background-color: whitesmoke;
+    }

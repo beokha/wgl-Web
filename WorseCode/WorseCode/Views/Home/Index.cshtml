@@ -2,45 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<!-- main div for map -->
-<div id="map">
-</div>
-
-
-<!--
-    Script section
--->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-      google.charts.load('current', {
-        'packages':['geochart'],
-        'mapsApiKey': 'AIzaSyBU6OHlQtVM-T0vKMBPjHg9DRtUC4fyRIk'
-      });
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-      function drawRegionsMap() {
-        var data = google.visualization.arrayToDataTable([
-          ['Country', 'Popularity'],
-          ['Germany', 500],
-          ['United States', 300],
-          ['Brazil', 400],
-          ['Canada', 500],
-          ['France', 600],
-          ['RU', 700]
-        ]);
-
-        var options = {
-            colorAxis: { colors: ['#8b9dc3', '#dfe3ee'] },
-            backgroundColor: '#81d4fa',
-            datalessRegionColor: 'white'
-        };
-
-        var chart = new google.visualization.GeoChart(document.getElementById('map'));
-        chart.draw(data, options);
-      }
-</script>
-
-@*<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -143,4 +105,4 @@
             <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
         </ul>
     </div>
-</div>*@
+</div>
