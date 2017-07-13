@@ -2,6 +2,56 @@
 // This script is use for: 
 
 
+/*
+    Summary:
+        Hellow message
+*/
+(function ($) {
+
+    var wgl = $("#wgl"),
+        wgl_principles = $("#wgl_principles"),
+        children_h4 = $(wgl_principles).children("h4"),
+        wgl_backround = $("#wgl_backround"),
+        // Variable, for remembering last hide element's.
+        hideRemember = 0;
+
+    // Show h4
+    $.each(children_h4, function (index, value) {
+        $(this).delay(500 * Math.log(index * Math.pow(2.71, index))).fadeIn("slow");
+
+        /*
+            Summary: IF we show 2 h4 - Begin to hide shown element
+        */
+        if (index > 1) {
+            for (var i = hideRemember; i <= index; i += 1) {
+                children_h4.eq(i).delay(500 * Math.log(i * Math.pow(2.71, i))).hide("slow");
+                console.log(i);
+            }
+            hideRemember = index + 1;
+        }
+    })
+        .promise()
+        .done(function () {
+
+            /*
+                Uncomment that, to hide 'Hellow message and show main page'
+            */
+            
+            //// Hide 'Hellow message'
+            //wgl.fadeOut("fast").promise().done(function () {
+
+            //    // Show main page block's
+            //    $.each($(".body-content.container > .row > div"), function (index, value) {
+
+            //        $(this).fadeIn("fast");
+            //        $(this).delay(500 * Math.log(index * Math.pow(2.71, index))).fadeIn("slow");
+            //    });
+            //})
+        });
+
+    
+})($);
+
 
 /*--
     Summary:

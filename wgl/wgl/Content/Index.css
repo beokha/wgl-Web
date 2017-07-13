@@ -5,6 +5,76 @@
     background-size: cover;
 }
 
+#wgl {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+
+    top: 0%;
+    left: 0%;
+    padding: 0;
+    margin: 0;
+}
+
+#wgl_principles {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    right: 0;
+    bottom: 0;
+
+    text-align: center;
+    z-index: 100;
+}
+    #wgl_principles h4 {
+        display: none;
+        position: relative;
+        margin: 2%;
+        
+
+        font-size: xx-large;
+        
+    }
+        #wgl_principles h4 span {
+            cursor: pointer;
+        }
+        #wgl_principles h4 span:before { /* TODO: Underline */
+            content: "";
+            position: absolute;
+            width: 20%;
+            height: 2px;
+            bottom: 0;
+            left: 40%;
+
+            background: whitesmoke;
+            visibility: hidden;
+
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: .25s linear;
+        }
+        #wgl_principles h4 span:hover:before,
+        #wgl_principles h4 span:focus:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+#wgl_backround {
+    position: absolute;
+
+    height: 95%;
+    width: 97%;
+    top: 5%;
+    left: 3%;
+    padding: 0;
+
+    border: 1px solid white;
+    border-radius: 10px 0px 0px 0px;
+    background: gray;
+    opacity: 0.8;
+}
+
 .body-content.container > .row {
     margin: 0;
     padding: 0px 1px 0px 1px;
@@ -12,11 +82,11 @@
 }
 
     .body-content.container > .row > div {
+        display: none;
         height: 100%;
         overflow-y: auto;
         border: 1px solid white;
         cursor: pointer;
-
         transition: 0.25s;
     }
         /* TODO: Borders */
