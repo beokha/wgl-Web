@@ -31,3 +31,26 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/*
+    Summary: 
+        Site figures
+*/
+.circle {
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.25s linear;
+    
+}
+    .circle:hover {
+        background: white;
+        box-shadow: 2px -1px 5px 6px gray;
+    }
