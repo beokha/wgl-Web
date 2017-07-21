@@ -39,6 +39,8 @@ textarea {
 */
 .circle {
     display: block;
+    text-align: center;
+    font-size: 33px;
     margin: 0;
     padding: 0;
     height: 50px;
@@ -50,6 +52,11 @@ textarea {
     transition: 0.25s linear;
     
 }
+    /* Second circle */
+    .circle:nth-last-of-type(1) {
+        margin-left: 70px;
+        color: yellow;
+    }
     .circle:hover {
         background: white;
         box-shadow: 2px -1px 5px 6px gray;
